@@ -1,0 +1,70 @@
+import { Button } from "@/components/ui/button";
+import { CheckCircle2, ArrowRight } from "lucide-react";
+import heroImage from "@assets/generated_images/modern_steel_frame_house_exterior.png";
+
+export default function Hero() {
+  return (
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#1A1A2E]">
+      {/* Background Gradient & Image Overlay */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1A1A2E] via-[#1A1A2E]/90 to-transparent z-10 w-full md:w-2/3" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A2E] to-transparent z-10 opacity-80" />
+        <img
+          src={heroImage}
+          alt="Modern Steel Frame House"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-20 grid md:grid-cols-2 gap-12 items-center">
+        <div className="space-y-8 animate-in slide-in-from-left duration-700">
+          <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 backdrop-blur-sm">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-primary text-xs md:text-sm font-bold tracking-wide uppercase">
+              Pioneiros em Steel Frame no Piauí
+            </span>
+          </div>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight">
+            Construa em até <span className="text-primary">6x menos tempo</span> com precisão industrial
+          </h1>
+
+          <p className="text-lg text-gray-300 max-w-xl leading-relaxed">
+            Somos a primeira construtora especializada em Light Steel Frame no Piauí. 
+            Projetos residenciais de alto padrão e obras municipais entregues com 
+            precisão, sustentabilidade e garantia de 20 anos.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 pt-2">
+            <Button size="lg" className="h-14 px-8 text-base bg-primary hover:bg-primary/90 hover:-translate-y-1 transition-all shadow-lg shadow-primary/25">
+              Solicite Orçamento Grátis
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button size="lg" variant="outline" className="h-14 px-8 text-base border-white/20 text-white hover:bg-white/10 hover:border-white transition-all">
+              Conheça Nossos Projetos
+            </Button>
+          </div>
+
+          <div className="flex flex-wrap gap-4 pt-4 text-sm font-medium text-gray-400">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="text-primary h-5 w-5" />
+              <span>Garantia 20 anos</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="text-primary h-5 w-5" />
+              <span>CREA Ativo</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="text-primary h-5 w-5" />
+              <span>Projetos Entregues</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Right side is intentionally empty to show the background image through, 
+            but on mobile/tablet we might want to show something or just let the text take over */}
+        <div className="hidden md:block" />
+      </div>
+    </section>
+  );
+}
