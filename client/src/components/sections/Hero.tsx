@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight } from "lucide-react";
-import heroImage from "@assets/generated_images/modern_steel_frame_house_exterior.png";
+import heroImage from "@assets/generated_images/steel_frame_house_construction_site.png";
 
 export default function Hero() {
   return (
