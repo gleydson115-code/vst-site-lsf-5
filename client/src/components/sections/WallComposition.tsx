@@ -1,4 +1,4 @@
-import wallImage from "@assets/generated_images/clean_exploded_view_of_steel_frame_wall_layers_on_white_background.png";
+import wallImage from "@assets/image_1767454442595.png";
 
 export default function WallComposition() {
   const layers = [
