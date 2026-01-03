@@ -16,7 +16,7 @@ export default function WhyChoose() {
     {
       icon: GraduationCap,
       title: "Equipe Técnica Qualificada",
-      text: "Engenheiro responsável com CREA ativo e formação especializada"
+      text: "Seu projeto acompanhado por especialistas do início ao fim"
     },
     {
       icon: Shield,
