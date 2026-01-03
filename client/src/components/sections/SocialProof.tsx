@@ -4,7 +4,7 @@ export default function SocialProof() {
   const stats = [
     {
       icon: ShieldCheck,
-      text: "Parceiro Certificado Open Finance",
+      text: "Garantia estrutural de 20 anos",
     },
     {
       icon: Building2,

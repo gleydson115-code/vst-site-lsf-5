@@ -37,21 +37,6 @@ export default function Hero() {
               Conheça Nossos Projetos
             </Button>
           </div>
-
-          <div className="flex flex-wrap gap-4 pt-4 text-sm font-medium text-gray-400">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="text-primary h-5 w-5" />
-              <span>Garantia 20 anos</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="text-primary h-5 w-5" />
-              <span>CREA Ativo</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="text-primary h-5 w-5" />
-              <span>Projetos Entregues</span>
-            </div>
-          </div>
         </div>
 
         {/* Right side is intentionally empty to show the background image through, 
