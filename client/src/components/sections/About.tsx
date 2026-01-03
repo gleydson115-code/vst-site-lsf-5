@@ -36,8 +36,8 @@ export default function About() {
               <ul className="space-y-4">
                 {[
                   "Projetos residenciais de alto padrão",
-                  "Obras municipais (escolas, creches)",
-                  "Construções comerciais e galpões",
+                  "Obras comerciais e galpões",
+                  "Construção modular",
                   "Ampliações e reformas com LSF",
                   "Consultoria técnica em Steel Frame"
                 ].map((item, i) => (
