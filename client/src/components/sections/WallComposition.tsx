@@ -1,4 +1,4 @@
-import wallImage from "@assets/unnamed_1767453936559.jpg";
+import wallImage from "@assets/generated_images/clean_exploded_view_of_steel_frame_wall_layers_on_white_background.png";
 
 export default function WallComposition() {
   const layers = [
@@ -25,24 +25,24 @@ export default function WallComposition() {
 
         <div className="relative max-w-5xl mx-auto">
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-border">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="relative">
+            <div className="flex flex-col gap-10">
+              <div className="relative w-full max-w-4xl mx-auto">
                  <img 
                   src={wallImage} 
                   alt="Camadas Parede Steel Frame" 
-                  className="w-full h-auto rounded-lg shadow-sm"
+                  className="w-full h-auto rounded-lg mix-blend-multiply"
                 />
                 <p className="text-xs text-muted-foreground mt-4 italic text-center">
                   * A composição da parede varia de acordo com o custo e exigências do projeto.
                 </p>
               </div>
               
-              <div className="space-y-2">
-                <h3 className="font-bold text-xl mb-6">Camadas do Sistema</h3>
-                <div className="space-y-0">
+              <div className="space-y-6">
+                <h3 className="font-bold text-xl text-center md:text-left border-b pb-4">Camadas do Sistema</h3>
+                <div className="grid md:grid-cols-2 gap-x-12 gap-y-0">
                   {layers.map((layer, index) => (
-                    <div key={index} className="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-lg transition-colors border-b border-gray-100 last:border-0">
-                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm shadow-sm">
+                    <div key={index} className="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-lg transition-colors border-b border-gray-100 last:border-0 md:border-b">
+                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm shadow-sm group-hover:scale-110 transition-transform">
                         {index + 1}
                       </span>
                       <span className="font-medium text-foreground/80">{layer}</span>
