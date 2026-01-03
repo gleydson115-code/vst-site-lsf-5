@@ -1,4 +1,4 @@
-import wallImage from "@assets/generated_images/3d_wall_cross_section_layers.png";
+import wallImage from "@assets/generated_images/realistic_exploded_view_of_steel_frame_wall_layers.png";
 
 export default function WallComposition() {
   const layers = [
@@ -30,6 +30,9 @@ export default function WallComposition() {
                   alt="Camadas Parede Steel Frame" 
                   className="w-full h-auto rounded-lg shadow-sm"
                 />
+                <p className="text-xs text-muted-foreground mt-4 italic text-center">
+                  * A composição da parede varia de acordo com o custo e exigências do projeto.
+                </p>
               </div>
               
               <div className="space-y-2">
