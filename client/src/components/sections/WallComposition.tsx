@@ -1,16 +1,18 @@
-import wallImage from "@assets/generated_images/realistic_exploded_view_of_steel_frame_wall_layers.png";
+import wallImage from "@assets/unnamed_1767453936559.jpg";
 
 export default function WallComposition() {
   const layers = [
-    "Gesso acartonado (drywall)",
-    "Isolante termoacústico",
-    "Estrutura de aço galvanizado",
-    "OSB (Oriented Strand Board)",
-    "Manta hidrófuga",
-    "EPS ou placa cimentícia",
-    "Tela de reforço",
+    "Elevação dos painéis de aço galvanizado",
+    "OSB Externo (Oriented Strand Board)",
+    "Manta Hidrófuga",
+    "EPS ou Chapa Cimentícia",
     "Argamassa",
-    "Acabamento externo"
+    "Tela de Reforço",
+    "Argamassa",
+    "Revestimento (Textura/Pintura/Porcelanato)",
+    "Isolante Termoacústico (Lã de rocha/vidro/PET)",
+    "OSB (Oriented Strand Board)",
+    "Gesso Acartonado"
   ];
 
   return (
