@@ -1,5 +1,5 @@
 import { Award, BadgeCheck, GraduationCap, Shield } from "lucide-react";
-import detailImage from "@assets/generated_images/steel_frame_connection_detail.png";
+import detailImage from "@assets/generated_images/cinematic_steel_frame_structure_at_twilight.png";
 
 export default function WhyChoose() {
   const differentials = [
