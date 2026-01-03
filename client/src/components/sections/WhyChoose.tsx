@@ -11,7 +11,7 @@ export default function WhyChoose() {
     {
       icon: BadgeCheck,
       title: "Experiência Comprovada",
-      text: "Projetos municipais e residenciais de alto padrão entregues com sucesso"
+      text: "Projetos comerciais e residenciais de alto padrão entregues com sucesso"
     },
     {
       icon: GraduationCap,

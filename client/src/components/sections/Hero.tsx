@@ -24,7 +24,7 @@ export default function Hero() {
 
           <p className="text-lg text-gray-300 max-w-xl leading-relaxed">
             Somos a primeira construtora especializada em Light Steel Frame no Piauí. 
-            Projetos residenciais de alto padrão e obras municipais entregues com 
+            Projetos residenciais de alto padrão e obras comerciais entregues com 
             precisão, sustentabilidade e garantia de 20 anos.
           </p>
 
