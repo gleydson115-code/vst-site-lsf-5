@@ -57,8 +57,10 @@ export default function Contact() {
             <div className="pt-8 border-t border-border">
               <h4 className="font-semibold mb-4">Redes Sociais</h4>
               <div className="flex gap-4">
-                <Button variant="outline" size="icon" className="rounded-full">
-                  <Instagram className="w-4 h-4" />
+                <Button variant="outline" size="icon" className="rounded-full" asChild>
+                  <a href="https://instagram.com/versatolsf" target="_blank" rel="noopener noreferrer">
+                    <Instagram className="w-4 h-4" />
+                  </a>
                 </Button>
                 <Button variant="outline" size="icon" className="rounded-full">
                   <Facebook className="w-4 h-4" />

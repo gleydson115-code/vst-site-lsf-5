@@ -14,7 +14,7 @@ export default function Footer() {
               Construindo o futuro com tecnologia e precisão. Líderes em construção a seco no Piauí.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors hover:bg-white/5 p-2 rounded-full">
+              <a href="https://instagram.com/versatolsf" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors hover:bg-white/5 p-2 rounded-full">
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-primary transition-colors hover:bg-white/5 p-2 rounded-full">
