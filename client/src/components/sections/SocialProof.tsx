@@ -11,10 +11,6 @@ export default function SocialProof() {
       text: "10+ Projetos Entregues",
     },
     {
-      icon: Ruler,
-      text: "500+ m² Construídos",
-    },
-    {
       icon: MapPin,
       text: "Atuação PI, MA e Nordeste",
     },
@@ -23,7 +19,7 @@ export default function SocialProof() {
   return (
     <section className="py-10 bg-secondary border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-center justify-center">
           {stats.map((stat, index) => (
             <div 
               key={index} 
