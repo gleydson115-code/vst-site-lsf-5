@@ -1,0 +1,946 @@
+# REPLIT DESIGN MODE PROMPT
+
+## Versato Steel Frame - Landing Page
+
+---
+
+## PROJECT OVERVIEW
+
+Create a modern, professional landing page for **Versato Steel Frame**, a construction company specialized in Light Steel Frame (LSF) building technology based in Teresina, Piauí, Brazil. The company is the first and leading LSF specialist in the region, serving both municipal projects (schools, daycare centers) and high-end residential developments.
+
+The design should convey: **technical expertise**, **innovation**, **trust**, and **regional pioneering**. The visual language should feel premium, clean, and engineering-precise — not generic or template-like.
+
+---
+
+## DESIGN SYSTEM (design.json)
+
+```json
+{
+  "designSystem": {
+    "name": "Versato Steel Frame Design System",
+    "version": "1.0",
+
+    "designPrinciples": [
+      "Precision and clarity — reflecting the engineering accuracy of steel frame construction",
+      "Bold confidence — conveying market leadership and expertise",
+      "Clean minimalism — no visual clutter, generous whitespace",
+      "Technical credibility — professional without being cold",
+      "Regional authenticity — adapted for Brazilian/Northeastern audience"
+    ],
+
+    "colors": {
+      "primary": {
+        "blue": {
+          "value": "#0066CC",
+          "usage": "Primary CTAs, links, icons, section titles, interactive elements, accent color"
+        },
+        "darkBlue": {
+          "value": "#1A1A2E",
+          "usage": "Hero backgrounds, footer, dark sections, header, premium feel areas"
+        },
+        "white": {
+          "value": "#FFFFFF",
+          "usage": "Light section backgrounds, text on dark backgrounds, cards"
+        }
+      },
+      "secondary": {
+        "lightGray": {
+          "value": "#F5F5F5",
+          "usage": "Alternate section backgrounds, subtle contrast areas"
+        },
+        "mediumGray": {
+          "value": "#E0E0E0",
+          "usage": "Borders, dividers, subtle separators"
+        },
+        "textPrimary": {
+          "value": "#1A1A1A",
+          "usage": "Main body text on light backgrounds"
+        },
+        "textSecondary": {
+          "value": "#666666",
+          "usage": "Secondary text, descriptions, captions"
+        }
+      },
+      "accent": {
+        "success": {
+          "value": "#28A745",
+          "usage": "Checkmarks, positive indicators, safety badges"
+        },
+        "highlight": {
+          "value": "#0052A3",
+          "usage": "Hover states for primary blue elements"
+        }
+      },
+      "gradients": {
+        "heroOverlay": "linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(26, 26, 46, 0.8) 100%)",
+        "darkSection": "linear-gradient(180deg, #1A1A2E 0%, #0D0D1A 100%)"
+      }
+    },
+
+    "typography": {
+      "fontFamily": {
+        "primary": "'Montserrat', sans-serif",
+        "fallback": "'Poppins', 'Inter', system-ui, sans-serif"
+      },
+      "scale": {
+        "hero": {
+          "fontSize": "clamp(2.5rem, 5vw, 4rem)",
+          "fontWeight": "900",
+          "lineHeight": "1.1",
+          "letterSpacing": "-0.02em"
+        },
+        "h1": {
+          "fontSize": "clamp(2rem, 4vw, 3rem)",
+          "fontWeight": "800",
+          "lineHeight": "1.2",
+          "letterSpacing": "-0.01em"
+        },
+        "h2": {
+          "fontSize": "clamp(1.75rem, 3vw, 2.5rem)",
+          "fontWeight": "700",
+          "lineHeight": "1.25"
+        },
+        "h3": {
+          "fontSize": "clamp(1.25rem, 2vw, 1.5rem)",
+          "fontWeight": "600",
+          "lineHeight": "1.3"
+        },
+        "h4": {
+          "fontSize": "1.125rem",
+          "fontWeight": "600",
+          "lineHeight": "1.4"
+        },
+        "body": {
+          "fontSize": "1rem",
+          "fontWeight": "400",
+          "lineHeight": "1.6"
+        },
+        "bodyLarge": {
+          "fontSize": "1.125rem",
+          "fontWeight": "400",
+          "lineHeight": "1.7"
+        },
+        "small": {
+          "fontSize": "0.875rem",
+          "fontWeight": "400",
+          "lineHeight": "1.5"
+        },
+        "caption": {
+          "fontSize": "0.75rem",
+          "fontWeight": "500",
+          "lineHeight": "1.4",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.05em"
+        }
+      }
+    },
+
+    "spacing": {
+      "base": "8px",
+      "scale": {
+        "xs": "4px",
+        "sm": "8px",
+        "md": "16px",
+        "lg": "24px",
+        "xl": "32px",
+        "2xl": "48px",
+        "3xl": "64px",
+        "4xl": "96px",
+        "5xl": "128px"
+      },
+      "section": {
+        "paddingY": "clamp(64px, 10vw, 120px)",
+        "paddingX": "clamp(16px, 5vw, 80px)"
+      },
+      "container": {
+        "maxWidth": "1200px",
+        "padding": "0 24px"
+      }
+    },
+
+    "components": {
+      "buttons": {
+        "primary": {
+          "background": "#0066CC",
+          "color": "#FFFFFF",
+          "padding": "16px 32px",
+          "borderRadius": "8px",
+          "fontWeight": "700",
+          "fontSize": "1rem",
+          "textTransform": "none",
+          "boxShadow": "0 4px 14px rgba(0, 102, 204, 0.25)",
+          "hoverBackground": "#0052A3",
+          "hoverTransform": "translateY(-2px)",
+          "hoverBoxShadow": "0 6px 20px rgba(0, 102, 204, 0.35)",
+          "transition": "all 0.3s ease"
+        },
+        "secondary": {
+          "background": "transparent",
+          "color": "#0066CC",
+          "border": "2px solid #0066CC",
+          "padding": "14px 30px",
+          "borderRadius": "8px",
+          "fontWeight": "600",
+          "hoverBackground": "#0066CC",
+          "hoverColor": "#FFFFFF"
+        },
+        "ghost": {
+          "background": "transparent",
+          "color": "#FFFFFF",
+          "border": "2px solid rgba(255,255,255,0.3)",
+          "hoverBorder": "2px solid #FFFFFF",
+          "hoverBackground": "rgba(255,255,255,0.1)"
+        }
+      },
+      "cards": {
+        "default": {
+          "background": "#FFFFFF",
+          "borderRadius": "16px",
+          "padding": "32px",
+          "boxShadow": "0 4px 20px rgba(0, 0, 0, 0.06)",
+          "border": "1px solid #E0E0E0",
+          "hoverBoxShadow": "0 8px 30px rgba(0, 0, 0, 0.1)",
+          "hoverTransform": "translateY(-4px)",
+          "transition": "all 0.3s ease"
+        },
+        "dark": {
+          "background": "rgba(255, 255, 255, 0.05)",
+          "borderRadius": "16px",
+          "padding": "32px",
+          "border": "1px solid rgba(255, 255, 255, 0.1)",
+          "backdropFilter": "blur(10px)"
+        },
+        "feature": {
+          "background": "#FFFFFF",
+          "borderRadius": "20px",
+          "padding": "40px",
+          "boxShadow": "0 10px 40px rgba(0, 0, 0, 0.08)"
+        }
+      },
+      "sectionTitle": {
+        "marker": {
+          "width": "4px",
+          "height": "100%",
+          "background": "#0066CC",
+          "marginRight": "16px",
+          "borderRadius": "2px"
+        },
+        "label": {
+          "fontSize": "0.875rem",
+          "fontWeight": "600",
+          "color": "#0066CC",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.1em",
+          "marginBottom": "8px"
+        }
+      },
+      "icons": {
+        "library": "Lucide React",
+        "defaultSize": "24px",
+        "featureSize": "48px",
+        "heroSize": "64px",
+        "strokeWidth": "1.5",
+        "color": "inherit"
+      },
+      "badges": {
+        "default": {
+          "background": "rgba(0, 102, 204, 0.1)",
+          "color": "#0066CC",
+          "padding": "6px 12px",
+          "borderRadius": "20px",
+          "fontSize": "0.75rem",
+          "fontWeight": "600"
+        }
+      }
+    },
+
+    "effects": {
+      "shadows": {
+        "sm": "0 2px 8px rgba(0, 0, 0, 0.04)",
+        "md": "0 4px 20px rgba(0, 0, 0, 0.06)",
+        "lg": "0 8px 30px rgba(0, 0, 0, 0.1)",
+        "xl": "0 16px 50px rgba(0, 0, 0, 0.12)",
+        "blue": "0 4px 14px rgba(0, 102, 204, 0.25)"
+      },
+      "transitions": {
+        "fast": "150ms ease",
+        "default": "300ms ease",
+        "slow": "500ms ease"
+      },
+      "animations": {
+        "fadeInUp": {
+          "from": { "opacity": 0, "transform": "translateY(20px)" },
+          "to": { "opacity": 1, "transform": "translateY(0)" }
+        },
+        "scaleIn": {
+          "from": { "opacity": 0, "transform": "scale(0.95)" },
+          "to": { "opacity": 1, "transform": "scale(1)" }
+        }
+      }
+    },
+
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px"
+    },
+
+    "borderRadius": {
+      "sm": "4px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "16px",
+      "2xl": "20px",
+      "full": "9999px"
+    }
+  }
+}
+
+```
+
+---
+
+## PAGE SECTIONS
+
+### Section 1: Header (Fixed Navigation)
+
+**Layout:** Horizontal bar, fixed on top with backdrop blur on scroll
+
+**Background:** Transparent initially, transitions to `#1A1A2E` with blur on scroll
+
+**Structure:**
+
+- **Logo:** Versato Steel Frame logo (left side) — generate a modern, geometric logo that combines the letters "V" and "A" with steel beam aesthetics. Colors: white version for dark header.
+- **Navigation Menu:** Home | Sobre | Vantagens | Como Funciona | Projetos | Contato | FAQ
+- **CTA Button:** "Solicite Orçamento" (primary button style, smaller size)
+- **Mobile:** Hamburger menu with slide-in drawer
+
+---
+
+### Section 2: Hero
+
+**Layout:** Full viewport height, 2 columns on desktop, stacked on mobile
+
+**Background:** Dark gradient overlay (`#1A1A2E` to `#0D0D1A`) over a background image/video of steel frame construction in progress. Generate an atmospheric image showing steel frame structure being assembled, with workers in the background, dramatic lighting, professional construction site.
+
+**Columns:**
+
+**Column 1 (Left - 55% width):**
+
+- **Badge/Label:** "Pioneiros em Steel Frame no Piauí" (caption style, with blue accent)
+- **Title (h1):** "Construa em até 6x menos tempo com a tecnologia que está revolucionando a construção civil"
+- **Subtitle:** "Somos a primeira construtora especializada em Light Steel Frame no Piauí. Projetos residenciais de alto padrão e obras municipais entregues com precisão industrial e garantia de 20 anos."
+- **CTA Buttons:**
+    - Primary: "Solicite Orçamento Grátis"
+    - Secondary (ghost): "Conheça Nossos Projetos"
+- **Trust Indicators:** Small row with icons: "✓ Garantia 20 anos" | "✓ CREA Ativo" | "✓ Projetos Entregues"
+
+**Column 2 (Right - 45% width):**
+
+- **Visual:** Generate a high-quality 3D render or photograph showing a completed modern steel frame house, clean architectural lines, warm lighting, tropical landscaping appropriate for Teresina's climate. The image should feel aspirational and premium.
+
+---
+
+### Section 3: Social Proof Bar
+
+**Layout:** Full width, single row
+
+**Background:** `#F5F5F5`
+
+**Content:** Horizontal scroll on mobile, centered on desktop
+
+- "Parceiro Certificado Open Finance" (with appropriate icon)
+- "10+ Projetos Entregues"
+- "500+ m² Construídos"
+- "Atuação PI, MA e Nordeste"
+
+Use subtle icons with text, monochromatic style.
+
+---
+
+### Section 4: About / Who We Are
+
+**Layout:** 2 columns, alternating content and image
+
+**Background:** `#FFFFFF`
+
+**Columns:**
+
+**Column 1 (Left):**
+
+- **Section Label:** "SOBRE NÓS" (caption style with blue vertical marker line on left)
+- **Title (h2):** "Quem Somos"
+- **Description:** "A Versato é uma construtora especializada em Light Steel Frame, com sede em Teresina/PI. Somos pioneiros na aplicação dessa tecnologia construtiva na região, trazendo para o Nordeste o que há de mais moderno em construção industrializada. Nossa missão é transformar a forma como se constrói no Brasil, oferecendo obras mais rápidas, precisas e sustentáveis."
+- **Sub-section Title (h3):** "O Que Fazemos"
+- **List (with check icons):**
+    - Projetos residenciais de alto padrão
+    - Obras municipais (escolas, creches, equipamentos públicos)
+    - Construções comerciais e galpões
+    - Ampliações e reformas com LSF
+    - Consultoria técnica em Steel Frame
+
+**Column 2 (Right):**
+
+- **Image:** Generate a professional photo of a construction team working on a steel frame structure, wearing safety equipment, collaborative atmosphere. Include visible steel frame elements. Alternatively, show the responsible engineer reviewing blueprints on site.
+
+---
+
+### Section 5: Advantages of Light Steel Frame
+
+**Layout:** 1 column header + 4-column grid of cards (2x2 on tablet, 1 column on mobile)
+
+**Background:** `#F5F5F5`
+
+**Header:**
+
+- **Section Label:** "VANTAGENS" (caption style with blue vertical marker)
+- **Title (h2):** "Por que construir em Steel Frame?"
+- **Subtitle:** "Tecnologia que une velocidade, economia e qualidade superior"
+
+**Cards Grid (use feature card style with icons):**
+
+**Card 1:**
+
+- **Icon:** Clock (Lucide)
+- **Title (h3):** "Obra até 6x Mais Rápida"
+- **Description:** "Construção industrializada reduz drasticamente o tempo de obra. Canteiro limpo e organizado, sem desperdício."
+
+**Card 2:**
+
+- **Icon:** PiggyBank (Lucide)
+- **Title (h3):** "Economia Real"
+- **Description:** "Estrutura leve = fundação mais simples e econômica. Zero desperdício de materiais. Economia com climatização."
+
+**Card 3:**
+
+- **Icon:** Thermometer (Lucide)
+- **Title (h3):** "Conforto Térmico Superior"
+- **Description:** "Excelente isolamento térmico mantém a temperatura interna estável. Ideal para o clima quente de Teresina."
+
+**Card 4:**
+
+- **Icon:** Volume2 (Lucide) with slash
+- **Title (h3):** "Isolamento Acústico"
+- **Description:** "Redução significativa de ruídos externos. Ambientes mais tranquilos e confortáveis."
+
+**Card 5:**
+
+- **Icon:** Maximize (Lucide)
+- **Title (h3):** "Mais Área Útil"
+- **Description:** "Paredes mais finas que alvenaria convencional aumentam o espaço interno aproveitável."
+
+**Card 6:**
+
+- **Icon:** Calculator (Lucide)
+- **Title (h3):** "Orçamento Previsível"
+- **Description:** "Orçamento preciso do início ao fim da obra. Sem surpresas ou custos extras inesperados."
+
+**Card 7:**
+
+- **Icon:** Leaf (Lucide)
+- **Title (h3):** "Sustentabilidade"
+- **Description:** "Construção a seco, sem desperdício. Uso mínimo de água. Materiais 100% recicláveis."
+
+**Card 8:**
+
+- **Icon:** Target (Lucide)
+- **Title (h3):** "Precisão Construtiva"
+- **Description:** "Estrutura industrializada fabricada sob medida. Acabamento perfeito garantido pela tecnologia."
+
+---
+
+### Section 6: Why Choose Versato
+
+**Layout:** 2 columns (image left, content right)
+
+**Background:** `#1A1A2E` (dark section)
+
+**Columns:**
+
+**Column 1 (Left - 50%):**
+
+- **Image:** Generate an image showing steel frame structure detail — close-up of galvanized steel beams connection, professional quality, showing the precision and quality of the materials. Dramatic lighting.
+
+**Column 2 (Right - 50%):**
+
+- **Section Label:** "DIFERENCIAIS" (caption style, white text)
+- **Title (h2):** "Por que escolher a Versato?" (white text)
+- **Cards (stacked, dark card style):**
+
+**Card 1:**
+
+- **Icon:** Award (Lucide)
+- **Title:** "Pioneirismo Regional"
+- **Text:** "Primeira e principal construtora especializada em LSF no Piauí"
+
+**Card 2:**
+
+- **Icon:** BadgeCheck (Lucide)
+- **Title:** "Experiência Comprovada"
+- **Text:** "Projetos municipais e residenciais de alto padrão entregues com sucesso"
+
+**Card 3:**
+
+- **Icon:** GraduationCap (Lucide)
+- **Title:** "Equipe Técnica Qualificada"
+- **Text:** "Engenheiro responsável com CREA ativo e formação especializada"
+
+**Card 4:**
+
+- **Icon:** Shield (Lucide)
+- **Title:** "Garantia de 20 Anos"
+- **Text:** "Garantia estrutural de duas décadas na estrutura metálica"
+
+---
+
+### Section 7: How It Works (Construction Process)
+
+**Layout:** 1 column header + horizontal timeline/steps
+
+**Background:** `#FFFFFF`
+
+**Header:**
+
+- **Section Label:** "PROCESSO CONSTRUTIVO" (caption style with blue marker)
+- **Title (h2):** "Como Funciona a Construção em Steel Frame"
+- **Subtitle:** "Do projeto à entrega das chaves em tempo recorde"
+
+**Timeline/Steps (horizontal on desktop, vertical on mobile):**
+
+Each step should have: number indicator, icon, title, brief description. Connect steps with a line or visual flow element.
+
+**Step 1:**
+
+- **Number:** 01
+- **Icon:** FileText (Lucide)
+- **Title:** "Projeto"
+- **Description:** "Análise do terreno e desenvolvimento do projeto estrutural personalizado"
+
+**Step 2:**
+
+- **Number:** 02
+- **Icon:** Layers (Lucide)
+- **Title:** "Fundação"
+- **Description:** "Execução do radier ou sapatas — fundação simplificada e econômica"
+
+**Step 3:**
+
+- **Number:** 03
+- **Icon:** Box (Lucide)
+- **Title:** "Estrutura LSF"
+- **Description:** "Montagem dos painéis de aço galvanizado conforme projeto"
+
+**Step 4:**
+
+- **Number:** 04
+- **Icon:** Zap (Lucide)
+- **Title:** "Instalações"
+- **Description:** "Execução das instalações elétricas e hidráulicas embutidas"
+
+**Step 5:**
+
+- **Number:** 05
+- **Icon:** Paintbrush (Lucide)
+- **Title:** "Acabamentos"
+- **Description:** "Revestimentos, pintura e acabamentos finais premium"
+
+**Step 6:**
+
+- **Number:** 06
+- **Icon:** Key (Lucide)
+- **Title:** "Entrega"
+- **Description:** "Vistoria final e entrega das chaves do seu imóvel"
+
+---
+
+### Section 8: Wall Composition Infographic
+
+**Layout:** Full width, centered content
+
+**Background:** `#F5F5F5`
+
+**Content:**
+
+- **Section Label:** "COMPOSIÇÃO" (caption style)
+- **Title (h2):** "Anatomia de uma Parede Steel Frame"
+
+**Visual:** Generate an exploded view infographic/diagram showing the layers of a steel frame wall. Show each layer separately with labels pointing to them:
+
+1. Gesso acartonado (drywall) interno
+2. Isolante termoacústico (lã de rocha)
+3. Estrutura de aço galvanizado
+4. OSB (Oriented Strand Board)
+5. Manta hidrófuga
+6. EPS ou placa cimentícia
+7. Tela de reforço
+8. Argamassa
+9. Acabamento externo (textura/pintura/porcelanato)
+
+The infographic should be clean, technical but accessible, with numbered labels and a legend. Use blue accents for the steel structure elements.
+
+---
+
+### Section 9: Projects Gallery
+
+**Layout:** 1 column header + masonry/grid gallery
+
+**Background:** `#FFFFFF`
+
+**Header:**
+
+- **Section Label:** "PROJETOS" (caption style with blue marker)
+- **Title (h2):** "Nossos Projetos"
+- **Subtitle:** "Obras entregues com excelência em Teresina e região"
+
+**Gallery Component Specifications:**
+
+- **Filter tabs:** Todos | Residencial | Institucional | Comercial (clickable, highlight active tab with blue underline)
+- **Grid:** Masonry or uniform grid (3 columns desktop, 2 tablet, 1 mobile)
+- **Gap between images:** 24px
+- **Image border-radius:** 12px
+- **Image aspect ratio:** Maintain original or crop to 4:3 / 3:2 for consistency
+
+**Hover Effect:**
+
+- Dark overlay: rgba(26, 26, 46, 0.75)
+- Project name (h4, white, Montserrat Semibold)
+- Location (small, white/gray)
+- "Ver Detalhes" button (ghost style, white border)
+- Smooth transition: 300ms ease
+
+**Lightbox on Click:**
+
+- Full-size image view
+- Navigation arrows (previous/next)
+- Project info overlay (name, location, category)
+- Close button (X icon) top-right
+- Click outside or ESC to close
+- Swipe gestures on mobile
+- Keyboard navigation (← → arrows)
+
+---
+
+**⚠️ REAL PROJECT IMAGES - INSERT HERE:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  INSTRUÇÕES PARA O DESENVOLVEDOR:                               │
+│                                                                 │
+│  As imagens abaixo devem ser fornecidas pelo cliente (Versato). │
+│  NÃO gerar imagens artificiais para esta seção.                 │
+│                                                                 │
+│  Especificações das imagens:                                    │
+│  • Formato: JPG, PNG ou WebP                                    │
+│  • Resolução mínima: 1200x800px                                 │
+│  • Proporção ideal: 4:3 ou 3:2                                  │
+│  • Otimizar para web (compressão sem perda de qualidade)        │
+└─────────────────────────────────────────────────────────────────┘
+
+```
+
+**Project Image Data Structure:**
+
+```json
+{
+  "projects": [
+    {
+      "id": 1,
+      "image": "[URL_OR_PATH_TO_IMAGE_1]",
+      "title": "Residência Família Silva",
+      "location": "Teresina, PI",
+      "category": "Residencial",
+      "area": "180m²",
+      "year": "2024",
+      "description": "Casa térrea com 3 suítes em Light Steel Frame"
+    },
+    {
+      "id": 2,
+      "image": "[URL_OR_PATH_TO_IMAGE_2]",
+      "title": "Creche Municipal",
+      "location": "Regeneração, PI",
+      "category": "Institucional",
+      "area": "320m²",
+      "year": "2024",
+      "description": "Creche modelo FNDE com estrutura LSF"
+    },
+    {
+      "id": 3,
+      "image": "[URL_OR_PATH_TO_IMAGE_3]",
+      "title": "[Nome do Projeto]",
+      "location": "[Cidade, UF]",
+      "category": "Residencial | Institucional | Comercial",
+      "area": "[Área em m²]",
+      "year": "[Ano]",
+      "description": "[Breve descrição]"
+    },
+    {
+      "id": 4,
+      "image": "[URL_OR_PATH_TO_IMAGE_4]",
+      "title": "[Nome do Projeto]",
+      "location": "[Cidade, UF]",
+      "category": "Residencial | Institucional | Comercial",
+      "area": "[Área em m²]",
+      "year": "[Ano]",
+      "description": "[Breve descrição]"
+    },
+    {
+      "id": 5,
+      "image": "[URL_OR_PATH_TO_IMAGE_5]",
+      "title": "[Nome do Projeto]",
+      "location": "[Cidade, UF]",
+      "category": "Residencial | Institucional | Comercial",
+      "area": "[Área em m²]",
+      "year": "[Ano]",
+      "description": "[Breve descrição]"
+    },
+    {
+      "id": 6,
+      "image": "[URL_OR_PATH_TO_IMAGE_6]",
+      "title": "[Nome do Projeto]",
+      "location": "[Cidade, UF]",
+      "category": "Residencial | Institucional | Comercial",
+      "area": "[Área em m²]",
+      "year": "[Ano]",
+      "description": "[Breve descrição]"
+    }
+  ]
+}
+
+```
+
+**Tipos de Imagens Recomendadas:**
+
+1. Fachada frontal de residência concluída
+2. Obra institucional (escola/creche FNDE) finalizada
+3. Estrutura LSF em fase de montagem (mostra o processo)
+4. Ambiente interno mostrando qualidade dos acabamentos
+5. Vista aérea ou ângulo amplo de projeto maior
+6. Foto antes/depois (se disponível)
+
+---
+
+### Section 10: FAQ (Frequently Asked Questions)
+
+**Layout:** 2 columns (title left, accordion right)
+
+**Background:** `#F5F5F5`
+
+**Column 1 (Left - 40%):**
+
+- **Section Label:** "DÚVIDAS FREQUENTES" (caption style with blue marker)
+- **Title (h2):** "Perguntas sobre Steel Frame"
+- **Subtitle:** "Tire suas principais dúvidas sobre a tecnologia Light Steel Frame"
+
+**Column 2 (Right - 60%):**
+
+**Accordion Component Specifications:**
+
+Use Shadcn/UI Accordion component (or similar) with the following behavior:
+
+```
+Accordion Behavior:
+- Type: "single" (only one item open at a time) OR "multiple" (allow multiple open)
+- Collapsible: true (clicking open item closes it)
+- Default: First question expanded on page load
+- Animation: Smooth height transition (300ms ease)
+
+Visual Structure per Item:
+┌─────────────────────────────────────────────────────────────┐
+│  [Question Text]                              [ChevronDown] │
+├─────────────────────────────────────────────────────────────┤
+│  [Answer Text - hidden by default, shown on click]          │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+
+Styling:
+- Question row:
+  - Background: #FFFFFF
+  - Padding: 20px 24px
+  - Border: 1px solid #E0E0E0
+  - Border-radius: 12px (when closed), top-radius only (when open)
+  - Font: Montserrat Semibold 600, 16-18px, #1A1A1A
+  - Cursor: pointer
+  - Hover: Background #F8F8F8
+
+- Chevron Icon:
+  - Icon: ChevronDown (Lucide)
+  - Size: 20px
+  - Color: #0066CC
+  - Rotation: 0deg (closed) → 180deg (open)
+  - Transition: transform 300ms ease
+
+- Answer area:
+  - Background: #FFFFFF
+  - Padding: 0 24px 20px 24px
+  - Border: 1px solid #E0E0E0 (continuing from question)
+  - Border-top: none
+  - Border-radius: 0 0 12px 12px
+  - Font: Montserrat Regular 400, 16px, #666666
+  - Line-height: 1.7
+  - Max-height animation for smooth expand/collapse
+
+- Spacing between accordion items: 12px
+
+Accessibility:
+- Use proper aria-expanded attributes
+- Keyboard navigation (Enter/Space to toggle)
+- Focus visible states
+
+```
+
+**FAQ Content (Questions & Answers):**
+
+**Q1:** "O Steel Frame é seguro? Aguenta ventos fortes e tempestades?"
+**A1:** "Sim, absolutamente. A estrutura de aço galvanizado é calculada por softwares especializados para suportar cargas de vento muito superiores às exigidas pelas normas brasileiras. O sistema é amplamente utilizado em regiões de furacões nos EUA e Japão. Além disso, funciona como uma 'gaiola de Faraday', oferecendo proteção elétrica aos ocupantes."
+
+**Q2:** "Quanto tempo demora uma construção em Steel Frame?"
+**A2:** "Uma construção em Steel Frame pode ser até 6x mais rápida que a alvenaria convencional. Uma casa de 150m² pode ficar pronta em 90 a 120 dias, dependendo da complexidade do projeto e dos acabamentos escolhidos."
+
+**Q3:** "O Steel Frame é mais caro que a construção tradicional?"
+**A3:** "O custo final é competitivo com a alvenaria. Embora o material estrutural possa custar mais, há economia significativa em fundação (estrutura mais leve), mão de obra (obra mais rápida), desperdício zero de materiais, e custos operacionais (economia com climatização). Além disso, o retorno de investimento é mais rápido pela agilidade na entrega."
+
+**Q4:** "A estrutura de aço não enferruja?"
+**A4:** "Não. Utilizamos aço galvanizado com tratamento anticorrosivo que garante durabilidade superior a 100 anos. O revestimento de zinco protege o aço contra oxidação. Por isso oferecemos garantia estrutural de 20 anos."
+
+**Q5:** "Posso fazer qualquer tipo de acabamento em Steel Frame?"
+**A5:** "Sim! Steel Frame aceita todos os tipos de acabamento: pintura, textura, porcelanato, pedras naturais, madeira. Internamente, as paredes recebem gesso acartonado que pode ser pintado, revestido ou decorado como qualquer parede convencional."
+
+**Q6:** "É possível fazer reformas ou ampliações depois?"
+**A6:** "Sim, e com muito mais facilidade que na alvenaria. As instalações ficam acessíveis nas paredes, facilitando manutenções. Ampliações podem ser feitas com menor impacto e sem 'montanhas de entulho'."
+
+**Q7:** "O Steel Frame funciona bem no clima quente de Teresina?"
+**A7:** "Sim, é ideal! O sistema possui excelente isolamento térmico, mantendo a temperatura interna estável e reduzindo significativamente o uso de ar-condicionado. Clientes relatam economia de até 30% na conta de energia."
+
+**Q8:** "Qual a garantia oferecida pela Versato?"
+**A8:** "Oferecemos garantia estrutural de 20 anos na estrutura metálica, além das garantias legais de 5 anos para sistemas hidráulicos e elétricos, e 1 ano para acabamentos, conforme Código Civil brasileiro."
+
+---
+
+### Section 11: CTA Section
+
+**Layout:** 1 column, centered content
+
+**Background:** `#1A1A2E` with subtle geometric pattern overlay (generate abstract geometric shapes related to steel frame construction)
+
+**Content:**
+
+- **Title (h2):** "Pronto para construir com tecnologia?" (white, centered)
+- **Subtitle:** "Solicite um orçamento sem compromisso e descubra como o Steel Frame pode transformar seu projeto"
+- **Benefits list (horizontal on desktop, vertical on mobile):**
+    - ✓ Orçamento gratuito e sem compromisso
+    - ✓ Resposta em até 24 horas
+    - ✓ Atendimento personalizado
+- **CTA Button:** "Solicite Orçamento Agora →" (primary button, larger size)
+- **Secondary text:** "ou ligue para (98) 98118-2870"
+
+---
+
+### Section 12: Contact Form
+
+**Layout:** 2 columns
+
+**Background:** `#FFFFFF`
+
+**Column 1 (Left - 45%):**
+
+- **Section Label:** "CONTATO" (caption style with blue marker)
+- **Title (h2):** "Fale Conosco"
+- **Subtitle:** "Estamos prontos para tirar suas dúvidas e começar seu projeto"
+- **Contact Info (with icons):**
+    - WhatsApp: (98) 98118-2870
+    - E-mail: [contato@versato.com.br](mailto:contato@versato.com.br)
+    - Localização: Teresina, Piauí
+- **Social Links:** Instagram, Facebook, LinkedIn icons
+
+**Column 2 (Right - 55%):**
+
+- **Form Card (elevated card style):**
+    - Nome completo (input)
+    - E-mail (input)
+    - Telefone/WhatsApp (input with mask)
+    - Cidade (input)
+    - Tipo de projeto (select: Residencial / Comercial / Institucional / Outro)
+    - Mensagem (textarea)
+    - **Submit Button:** "Enviar Mensagem" (primary button, full width)
+    - **Privacy note:** "Seus dados estão seguros conosco"
+
+---
+
+### Section 13: Footer
+
+**Layout:** 4 columns on desktop, stacked on mobile
+
+**Background:** `#0D0D1A` (darker than main dark color)
+
+**Columns:**
+
+**Column 1:**
+
+- Logo (white version)
+- Brief tagline: "Construindo o futuro com tecnologia e precisão"
+- Social icons: Instagram, Facebook, LinkedIn, YouTube
+
+**Column 2:**
+
+- **Title:** "Navegação"
+- Links: Home, Sobre, Vantagens, Como Funciona, Projetos, FAQ, Contato
+
+**Column 3:**
+
+- **Title:** "Contato"
+- Phone: (98) 98118-2870
+- Email: [contato@versato.com.br](mailto:contato@versato.com.br)
+- Address: Teresina, Piauí
+
+**Column 4:**
+
+- **Title:** "Legal"
+- Links: Política de Privacidade, Termos de Uso
+
+**Bottom Bar:**
+
+- "© 2025 Versato Construtora. Todos os direitos reservados."
+- "CNPJ: 50.514.699/0001-86 | Resp. Técnico: Eng. Gabriel Pacheco — CREA RN 1919126201"
+
+---
+
+### Floating Elements
+
+**WhatsApp Button:**
+
+- Position: Fixed, bottom-right corner
+- Icon: WhatsApp logo
+- Background: #25D366 (WhatsApp green)
+- Hover: Slight scale up + shadow
+- On click: Opens WhatsApp chat with pre-filled message
+
+**Scroll to Top Button:**
+
+- Appears after scrolling down
+- Position: Fixed, bottom-right (above WhatsApp button)
+- Icon: ChevronUp (Lucide)
+- Subtle, circular, matches primary blue
+
+---
+
+## ADDITIONAL NOTES FOR AI
+
+1. **Image Generation:** When generating images, prefer photorealistic style for construction photos and clean 3D renders for architectural visualizations. Maintain consistency in lighting and color grading across all generated images.
+2. **Responsive Design:** Ensure all sections are fully responsive. The design should feel native on mobile, not just "shrunk down desktop."
+3. **Animations:** Add subtle scroll-triggered animations (fade in, slide up) using Framer Motion or CSS animations. Keep them professional and not distracting.
+4. **Performance:** Lazy load images, use next/image if on Next.js, optimize all assets.
+5. **Accessibility:** Ensure proper contrast ratios (WCAG AA minimum), semantic HTML, keyboard navigation support.
+6. **Brazilian Portuguese:** All text content is in Brazilian Portuguese. Maintain proper grammar and regional terminology for construction industry.
+
+---
+
+## REFERENCE SITES
+
+- Structure reference: https://www.urbansteelframe.com.br/
+- Design quality reference: Premium construction company websites, architectural firm sites
+- The visual language should feel more modern and refined than the Urban Steel Frame reference, while maintaining similar content organization
+
+---
+
+*End of Prompt*
