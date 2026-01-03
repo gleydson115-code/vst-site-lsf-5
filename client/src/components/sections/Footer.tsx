@@ -49,11 +49,11 @@ export default function Footer() {
             <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span className="leading-relaxed">Av. Universitária, 750 - Fátima,<br />Teresina - PI</span>
+                <span className="leading-relaxed">Av. Jóquei Clube, 2150 - Sala 04 - Jóquei,<br />Teresina - PI, 64049-240</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>(98) 98118-2870</span>
+                <span>(86) 99861-7153</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
@@ -76,7 +76,6 @@ export default function Footer() {
           <p>© 2025 Versato Construtora. Todos os direitos reservados.</p>
           <div className="text-center md:text-right">
             <p>CNPJ: 50.514.699/0001-86</p>
-            <p className="mt-1">Resp. Técnico: Eng. Gabriel Pacheco — CREA RN 1919126201</p>
           </div>
         </div>
       </div>

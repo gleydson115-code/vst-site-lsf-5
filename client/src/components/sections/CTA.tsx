@@ -28,7 +28,7 @@ export default function CTA() {
           <Button size="lg" className="h-16 px-10 text-lg font-bold bg-primary hover:bg-primary/90 shadow-2xl shadow-primary/30">
             Solicite Orçamento Agora <ArrowRight className="ml-2" />
           </Button>
-          <span className="text-gray-500 text-sm">ou ligue para (98) 98118-2870</span>
+          <span className="text-gray-500 text-sm">ou ligue para (86) 99861-7153</span>
         </div>
       </div>
     </section>

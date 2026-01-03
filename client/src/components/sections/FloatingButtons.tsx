@@ -28,7 +28,7 @@ export default function FloatingButtons() {
       )}
 
       <a
-        href="https://wa.me/5598981182870?text=Olá! Gostaria de um orçamento."
+        href="https://wa.me/5586998617153?text=Olá! Gostaria de um orçamento."
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 group"

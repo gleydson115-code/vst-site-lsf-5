@@ -29,7 +29,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">WhatsApp</h3>
-                  <p className="text-muted-foreground">(98) 98118-2870</p>
+                  <p className="text-muted-foreground">(86) 99861-7153</p>
                 </div>
               </div>
               
@@ -49,7 +49,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Localização</h3>
-                  <p className="text-muted-foreground">Av. Universitária, 750 - Fátima<br/>Teresina - PI</p>
+                  <p className="text-muted-foreground">Av. Jóquei Clube, 2150 - Sala 04 - Jóquei<br/>Teresina - PI, 64049-240</p>
                 </div>
               </div>
             </div>
