@@ -18,15 +18,8 @@ export default function Hero() {
 
       <div className="container mx-auto px-4 md:px-6 relative z-20 grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-8 animate-in slide-in-from-left duration-700">
-          <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 backdrop-blur-sm">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-primary text-xs md:text-sm font-bold tracking-wide uppercase">
-              Pioneiros em Steel Frame no Piauí
-            </span>
-          </div>
-
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight">
-            Construa em até <span className="text-primary">6x menos tempo</span> com precisão industrial
+            O Futuro da Construção <span className="text-primary">Chegou ao Piauí</span>
           </h1>
 
           <p className="text-lg text-gray-300 max-w-xl leading-relaxed">

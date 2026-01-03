@@ -10,7 +10,10 @@ export default function About() {
           <div className="space-y-8 order-2 md:order-1">
             <div className="flex items-center gap-4">
               <div className="w-1 h-12 bg-primary rounded-full" />
-              <span className="text-primary font-bold tracking-widest text-sm uppercase">Sobre Nós</span>
+              <div className="flex flex-col">
+                <span className="text-primary font-bold tracking-widest text-sm uppercase">Sobre Nós</span>
+                <span className="text-primary/60 font-bold text-[10px] uppercase tracking-[0.2em] mt-1">Pioneiros em Steel Frame no Piauí</span>
+              </div>
             </div>
             
             <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
