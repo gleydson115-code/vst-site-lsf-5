@@ -6,6 +6,8 @@ import logoDark from "@assets/vst-logo-dark-horiz_1771445183074.png";
 
 import vst_logo_grey_horiz from "@assets/vst-logo-grey-horiz.png";
 
+import VST___HORIZONTAL_2x from "@assets/VST - HORIZONTAL@2x.png";
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,7 +29,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <a href="#" className="flex items-center">
           <img 
-            src={vst_logo_grey_horiz} 
+            src={VST___HORIZONTAL_2x} 
             alt="Versato Steel Frame" 
             className="h-8 md:h-10 w-auto transition-all duration-300" 
           />
