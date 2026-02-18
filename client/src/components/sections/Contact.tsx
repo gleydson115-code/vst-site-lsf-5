@@ -58,15 +58,14 @@ export default function Contact() {
               <h4 className="font-semibold mb-4">Redes Sociais</h4>
               <div className="flex gap-4">
                 <Button variant="outline" size="icon" className="rounded-full" asChild>
-                  <a href="https://instagram.com/versatolsf" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/versatosteelframe/" target="_blank" rel="noopener noreferrer">
                     <Instagram className="w-4 h-4" />
                   </a>
                 </Button>
-                <Button variant="outline" size="icon" className="rounded-full">
-                  <Facebook className="w-4 h-4" />
-                </Button>
-                <Button variant="outline" size="icon" className="rounded-full">
-                  <Linkedin className="w-4 h-4" />
+                <Button variant="outline" size="icon" className="rounded-full" asChild>
+                  <a href="https://www.facebook.com/profile.php?id=61588591881056" target="_blank" rel="noopener noreferrer">
+                    <Facebook className="w-4 h-4" />
+                  </a>
                 </Button>
               </div>
             </div>
