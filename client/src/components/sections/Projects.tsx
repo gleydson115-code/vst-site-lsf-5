@@ -3,22 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { X, ArrowRight, MapPin, Clock, Ruler, ShieldCheck } from "lucide-react";
 
-// Import project images from attached_assets
-import ibiapina1 from "@assets/image_1767451374592.png";
-import ibiapina2 from "@assets/image_1767451013444.png";
-import ibiapina3 from "@assets/image_1767451673635.png";
-import vilar1 from "@assets/image_1767452155688.png";
-import alphaville1 from "@assets/image_1767451482073.png";
-import casacor1 from "@assets/image_1767453018909.png";
-import burger45 from "@assets/image_1767453813377.png";
-import aldebaranGaragem from "@assets/image_1767453832386.png";
-import aldebaranResidencia from "@assets/Gemini_Generated_Image_3pmpxk3pmpxk3pmp_(1)_1767453839531.png";
-
 const projects = [
   {
     id: 1,
-    image: ibiapina1,
-    gallery: [ibiapina2, ibiapina3],
+    image: "/projects/ibiapina/cover.jpg",
+    gallery: ["/projects/ibiapina/1.jpg", "/projects/ibiapina/2.jpg"],
     title: "Parede Corta-Fogo – Grupo Ibiapina",
     location: "Teresina, PI",
     category: "Comercial",
@@ -35,39 +24,42 @@ const projects = [
   },
   {
     id: 2,
-    image: vilar1,
+    image: "/projects/vilar/cover.jpg",
+    gallery: [],
     title: "Fachada Hospitalar – Vilar Hospital de Olhos",
     location: "Teresina, PI",
     category: "Institucional",
     area: "Fachada Externa",
     year: "2024",
-    description: "Fachada executada em LSF com placas Glasroc X para minimizar impacto na operação hospitalar. A solução evitou andaimes e resíduos, garantindo isolamento térmico com obra limpa.",
+    description: "Fachada executada em LSF com placas Glasroc X para minimizar impacto na operação hospitalar. A solução evitou andaimes e resíduos, manteve a calçada livre e garantiu isolamento térmico.",
     details: [
       "Execução sem interferência na operação da unidade",
       "Revestimentos: Glasroc X e Drywall ST 12.5",
-      "Volume mínimo de resíduos (obra seca)",
-      "Isolamento térmico superior"
+      "Mínima interferência na operação hospitalar",
+      "Resíduos gerados: Volume mínimo (obra seca)"
     ]
   },
   {
     id: 3,
-    image: alphaville1,
+    image: "/projects/alphaville/cover.jpg",
+    gallery: [],
     title: "Ampliação Residencial – Alphaville",
     location: "Teresina, PI",
     category: "Residencial",
     area: "Novo Quarto",
     year: "2024",
-    description: "Ampliação de quarto executada com LSF em residência já habitada. Com laje seca, isolamento duplo em lã de vidro e telha termoacústica, entregou conforto térmico superior e obra silenciosa.",
+    description: "Ampliação de quarto executada com LSF em residência já habitada, evitando demolições e interferências. Com laje seca, isolamento duplo em lã de vidro e telha termoacústica.",
     details: [
       "Sem necessidade de reforço estrutural ou demolições",
       "Revestimentos: Glasroc X e Drywall Performa 12.5mm duplo",
       "Isolamento: Lã de vidro 100 mm",
-      "Obra rápida, limpa e silenciosa"
+      "Alto conforto térmico e acústico"
     ]
   },
   {
     id: 4,
-    image: casacor1,
+    image: "/projects/casacor/cover.jpg",
+    gallery: [],
     title: "Estande CASACOR|PI 2024",
     location: "Teresina, PI",
     category: "Comercial",
@@ -78,55 +70,58 @@ const projects = [
       "Tempo de execução: ~20 dias",
       "Logística compacta (obra seca)",
       "Acabamento: Placa cimentícia aparente",
-      "Projeto premiado de alto padrão"
+      "Projeto premiado com acabamento de alto padrão"
     ]
   },
   {
     id: 5,
-    image: burger45,
+    image: "/projects/45burguer/cover.jpg",
+    gallery: [],
     title: "Mezanino – 45 Burguer",
     location: "Teresina, PI",
     category: "Comercial",
     area: "Mezanino Comercial",
     year: "2024",
-    description: "Mezanino em LSF com perfis de 90 mm e laje seca em OSB. Estrutura leve permitiu montagem rápida em espaço reduzido, com escada integrada ao sistema metálico.",
+    description: "Mezanino executado em Light Steel Framing com perfis de 90 mm e laje seca em OSB. Estrutura leve permitiu montagem rápida e segura em espaço reduzido.",
     details: [
-      "Execução rápida em espaço reduzido",
-      "Estrutura 100% em Light Steel Framing",
-      "Impacto mínimo na operação do restaurante",
-      "Laje seca em OSB"
+      "Construção de mezanino em ponto comercial",
+      "Escada de acesso 100% em LSF",
+      "Obra seca, rápida e segura",
+      "Impacto mínimo na operação"
     ]
   },
   {
     id: 6,
-    image: aldebaranGaragem,
+    image: "/projects/aldebaran-garagem/cover.jpg",
+    gallery: [],
     title: "Garagem Residencial – Aldebaran Leste",
     location: "Teresina, PI",
     category: "Residencial",
     area: "Garagem Anexa",
     year: "A Iniciar",
-    description: "Execução de garagem em LSF com perfis de 90 e 140 mm. Painéis pré-fabricados fora do canteiro para evitar sujeira. Estrutura com balanço arquitetônico e vedação em Glasroc X.",
+    description: "Execução de garagem anexa em residência já habitada. Painéis pré-fabricados fora do canteiro para evitar sujeira. Estrutura com balanço arquitetônico moderno.",
     details: [
       "Balanço estrutural moderno",
       "Montagem rápida e obra limpa",
-      "Painéis pré-fabricados",
-      "Mínimo impacto à rotina da família"
+      "Perfis de 90 e 140 mm",
+      "Vedação em Glasroc X e forro em RU"
     ]
   },
   {
     id: 7,
-    image: aldebaranResidencia,
+    image: "/projects/aldebaran-residencia/cover.jpg",
+    gallery: [],
     title: "Residência Alto Padrão – Aldebaran Ville",
     location: "Teresina, PI",
     category: "Residencial",
     area: "341,38m²",
     year: "A Iniciar",
-    description: "Residência de alto padrão com 341,38m² em LSF. Escolhido pela agilidade, limpeza e eficiência. Estrutura industrializada com alto desempenho térmico e sustentabilidade.",
+    description: "Residência de alto padrão construída em LSF, escolhido pela agilidade e eficiência. Estrutura industrializada com alto desempenho térmico e menor geração de resíduos.",
     details: [
-      "Consumo de aço: ~11.000 kg",
-      "Alto desempenho térmico",
-      "Redução significativa de tempo de obra",
-      "Precisão e sustentabilidade"
+      "Área Construída: 341,38 m²",
+      "Consumo de aço estimado: 11.000 kg",
+      "Redução de tempo de obra",
+      "Custo compatível com metodologia tradicional"
     ]
   }
 ];
@@ -204,7 +199,7 @@ export default function Projects() {
                           alt={project.title} 
                           className="w-full h-full object-cover rounded-lg col-span-2"
                         />
-                        {project.gallery && project.gallery.map((img, idx) => (
+                        {project.gallery && project.gallery.length > 0 && project.gallery.map((img, idx) => (
                           <img 
                             key={idx}
                             src={img} 
