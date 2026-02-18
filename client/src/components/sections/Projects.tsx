@@ -1,47 +1,136 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { X, ArrowRight, MapPin } from "lucide-react";
-import project1 from "@assets/generated_images/modern_luxury_house_project.png";
-import project2 from "@assets/generated_images/modern_daycare_building_project.png";
-import project3 from "@assets/generated_images/commercial_building_project.png";
+import { X, ArrowRight, MapPin, Clock, Ruler, ShieldCheck } from "lucide-react";
+
+// Import project images from attached_assets
+import ibiapina1 from "@assets/image_1767451013444.png"; // Placeholder mapping based on visual similarity/order
+import vilar1 from "@assets/image_1767452155688.png";
+import alphaville1 from "@assets/image_1767451482073.png";
+import casacor1 from "@assets/image_1767453018909.png";
+import burger45 from "@assets/image_1767453813377.png";
+import aldebaranGaragem from "@assets/image_1767453832386.png";
+import aldebaranResidencia from "@assets/Gemini_Generated_Image_3pmpxk3pmpxk3pmp_(1)_1767453839531.png";
 
 const projects = [
   {
     id: 1,
-    image: project1,
-    title: "Residência Família Silva",
+    image: ibiapina1,
+    title: "Parede Corta-Fogo – Grupo Ibiapina",
     location: "Teresina, PI",
-    category: "Residencial",
-    area: "180m²",
+    category: "Comercial",
+    area: "1000m²",
     year: "2024",
-    description: "Casa térrea com 3 suítes em Light Steel Frame. Projeto moderno com grandes vãos livres."
+    description: "Parede corta-fogo em LSF com TRRF de 120 min, executada em galpão em operação. A solução evitou escavações, reduziu o custo frente à alvenaria e acelerou a regularização junto ao Corpo de Bombeiros.",
+    details: [
+      "Divisória corta-fogo em galpão comercial",
+      "TRRF: 120 minutos",
+      "Altura: 16,5m",
+      "Consumo de aço leve: 12.000kg",
+      "Revestimentos: Glasroc X e Drywall RF 15mm duplo"
+    ]
   },
   {
     id: 2,
-    image: project2,
-    title: "Creche Municipal",
-    location: "Regeneração, PI",
+    image: vilar1,
+    title: "Fachada Hospitalar – Vilar Hospital de Olhos",
+    location: "Teresina, PI",
     category: "Institucional",
-    area: "320m²",
+    area: "Fachada Externa",
     year: "2024",
-    description: "Creche modelo FNDE com estrutura LSF, entregue em 120 dias."
+    description: "Fachada executada em LSF com placas Glasroc X para minimizar impacto na operação hospitalar. A solução evitou andaimes e resíduos, garantindo isolamento térmico com obra limpa.",
+    details: [
+      "Execução sem interferência na operação da unidade",
+      "Revestimentos: Glasroc X e Drywall ST 12.5",
+      "Volume mínimo de resíduos (obra seca)",
+      "Isolamento térmico superior"
+    ]
   },
   {
     id: 3,
-    image: project3,
-    title: "Centro Comercial Prime",
+    image: alphaville1,
+    title: "Ampliação Residencial – Alphaville",
+    location: "Teresina, PI",
+    category: "Residencial",
+    area: "Novo Quarto",
+    year: "2024",
+    description: "Ampliação de quarto executada com LSF em residência já habitada. Com laje seca, isolamento duplo em lã de vidro e telha termoacústica, entregou conforto térmico superior e obra silenciosa.",
+    details: [
+      "Sem necessidade de reforço estrutural ou demolições",
+      "Revestimentos: Glasroc X e Drywall Performa 12.5mm duplo",
+      "Isolamento: Lã de vidro 100 mm",
+      "Obra rápida, limpa e silenciosa"
+    ]
+  },
+  {
+    id: 4,
+    image: casacor1,
+    title: "Estande CASACOR|PI 2024",
     location: "Teresina, PI",
     category: "Comercial",
-    area: "450m²",
+    area: "Estande de Evento",
     year: "2024",
-    description: "Edifício comercial de 2 pavimentos com fachada em vidro e estrutura mista."
+    description: "Executado em Light Steel Framing em apenas 20 dias. A solução seca permitiu montagem organizada com mínimo entulho. A placa cimentícia aparente valorizou o conceito estético industrial.",
+    details: [
+      "Tempo de execução: ~20 dias",
+      "Logística compacta (obra seca)",
+      "Acabamento: Placa cimentícia aparente",
+      "Projeto premiado de alto padrão"
+    ]
+  },
+  {
+    id: 5,
+    image: burger45,
+    title: "Mezanino – 45 Burguer",
+    location: "Teresina, PI",
+    category: "Comercial",
+    area: "Mezanino Comercial",
+    year: "2024",
+    description: "Mezanino em LSF com perfis de 90 mm e laje seca em OSB. Estrutura leve permitiu montagem rápida em espaço reduzido, com escada integrada ao sistema metálico.",
+    details: [
+      "Execução rápida em espaço reduzido",
+      "Estrutura 100% em Light Steel Framing",
+      "Impacto mínimo na operação do restaurante",
+      "Laje seca em OSB"
+    ]
+  },
+  {
+    id: 6,
+    image: aldebaranGaragem,
+    title: "Garagem Residencial – Aldebaran Leste",
+    location: "Teresina, PI",
+    category: "Residencial",
+    area: "Garagem Anexa",
+    year: "A Iniciar",
+    description: "Execução de garagem em LSF com perfis de 90 e 140 mm. Painéis pré-fabricados fora do canteiro para evitar sujeira. Estrutura com balanço arquitetônico e vedação em Glasroc X.",
+    details: [
+      "Balanço estrutural moderno",
+      "Montagem rápida e obra limpa",
+      "Painéis pré-fabricados",
+      "Mínimo impacto à rotina da família"
+    ]
+  },
+  {
+    id: 7,
+    image: aldebaranResidencia,
+    title: "Residência Alto Padrão – Aldebaran Ville",
+    location: "Teresina, PI",
+    category: "Residencial",
+    area: "341,38m²",
+    year: "A Iniciar",
+    description: "Residência de alto padrão com 341,38m² em LSF. Escolhido pela agilidade, limpeza e eficiência. Estrutura industrializada com alto desempenho térmico e sustentabilidade.",
+    details: [
+      "Consumo de aço: ~11.000 kg",
+      "Alto desempenho térmico",
+      "Redução significativa de tempo de obra",
+      "Precisão e sustentabilidade"
+    ]
   }
 ];
 
 export default function Projects() {
   const [filter, setFilter] = useState("Todos");
-  const categories = ["Todos", "Residencial", "Institucional", "Comercial"];
+  const categories = ["Todos", "Residencial", "Comercial", "Institucional"];
 
   const filteredProjects = filter === "Todos" 
     ? projects 
@@ -53,11 +142,11 @@ export default function Projects() {
         <div className="text-center mb-12 space-y-4">
           <div className="flex items-center justify-center gap-2">
             <span className="h-8 w-1 bg-primary rounded-full" />
-            <span className="text-primary font-bold tracking-widest text-sm uppercase">Projetos</span>
+            <span className="text-primary font-bold tracking-widest text-sm uppercase">Portfólio</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Nossos Projetos</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Obras de Excelência</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Obras entregues com excelência em Teresina e região
+            Conheça nossos projetos executados com a tecnologia Light Steel Frame no Piauí
           </p>
         </div>
 
@@ -82,7 +171,7 @@ export default function Projects() {
             <Dialog key={project.id}>
               <DialogTrigger asChild>
                 <div className="group relative rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300">
-                  <div className="aspect-[4/3] overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden bg-muted">
                     <img 
                       src={project.image} 
                       alt={project.title} 
@@ -91,7 +180,7 @@ export default function Projects() {
                   </div>
                   <div className="absolute inset-0 bg-[#1A1A2E]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                     <span className="text-primary font-bold text-xs uppercase mb-2">{project.category}</span>
-                    <h3 className="text-white font-bold text-xl mb-1">{project.title}</h3>
+                    <h3 className="text-white font-bold text-lg mb-1 line-clamp-2">{project.title}</h3>
                     <p className="text-gray-300 text-sm flex items-center gap-1 mb-4">
                       <MapPin className="w-3 h-3" /> {project.location}
                     </p>
@@ -105,14 +194,14 @@ export default function Projects() {
                  <DialogTitle className="sr-only">{project.title}</DialogTitle>
                  <DialogDescription className="sr-only">{project.description}</DialogDescription>
                  <div className="grid md:grid-cols-2">
-                    <div className="h-64 md:h-auto">
+                    <div className="h-72 md:h-auto bg-muted">
                       <img 
                         src={project.image} 
                         alt={project.title} 
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-8 space-y-6">
+                    <div className="p-8 space-y-6 max-h-[90vh] overflow-y-auto">
                       <div>
                         <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full uppercase">
                           {project.category}
@@ -124,22 +213,45 @@ export default function Projects() {
                       </div>
 
                       <div className="grid grid-cols-2 gap-4 py-4 border-y border-border">
-                        <div>
-                          <p className="text-sm text-muted-foreground">Área Construída</p>
-                          <p className="font-semibold">{project.area}</p>
+                        <div className="flex items-center gap-2">
+                          <Ruler className="w-4 h-4 text-primary" />
+                          <div>
+                            <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Dimensão</p>
+                            <p className="text-sm font-semibold">{project.area}</p>
+                          </div>
                         </div>
-                        <div>
-                          <p className="text-sm text-muted-foreground">Ano de Entrega</p>
-                          <p className="font-semibold">{project.year}</p>
+                        <div className="flex items-center gap-2">
+                          <Clock className="w-4 h-4 text-primary" />
+                          <div>
+                            <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Ano / Status</p>
+                            <p className="text-sm font-semibold">{project.year}</p>
+                          </div>
                         </div>
                       </div>
 
-                      <p className="text-foreground/80 leading-relaxed">
+                      <div className="space-y-3">
+                        <h4 className="font-bold text-sm uppercase tracking-wider flex items-center gap-2">
+                          <ShieldCheck className="w-4 h-4 text-primary" /> Destaques Técnicos
+                        </h4>
+                        <ul className="grid gap-2">
+                          {project.details.map((detail, idx) => (
+                            <li key={idx} className="text-sm text-foreground/80 flex items-start gap-2">
+                              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                              {detail}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <p className="text-sm text-foreground/80 leading-relaxed italic border-l-2 border-primary/30 pl-4">
                         {project.description}
                       </p>
 
-                      <Button className="w-full">
-                        Quero um projeto como este
+                      <Button className="w-full group" asChild>
+                        <a href="#contato">
+                          Quero um projeto como este
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                        </a>
                       </Button>
                     </div>
                  </div>
