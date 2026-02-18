@@ -4,8 +4,8 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } 
 import { X, ArrowRight, MapPin, Clock, Ruler, ShieldCheck } from "lucide-react";
 
 // Import project images from attached_assets
-import ibiapina1 from "@assets/image_1767451013444.png";
-import ibiapina2 from "@assets/image_1767451374592.png";
+import ibiapina1 from "@assets/image_1767451374592.png";
+import ibiapina2 from "@assets/image_1767451013444.png";
 import ibiapina3 from "@assets/image_1767451673635.png";
 import vilar1 from "@assets/image_1767452155688.png";
 import alphaville1 from "@assets/image_1767451482073.png";
