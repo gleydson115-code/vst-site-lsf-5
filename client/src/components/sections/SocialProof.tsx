@@ -12,7 +12,7 @@ export default function SocialProof() {
     },
     {
       icon: MapPin,
-      text: "Atuação PI, MA e Nordeste",
+      text: "Atuação no Piauí e em todo o Nordeste",
     },
   ];
 
