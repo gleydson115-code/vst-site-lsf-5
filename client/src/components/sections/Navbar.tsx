@@ -2,11 +2,6 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoWhite from "@assets/vst-logo-2x-bco_1767448844183.png";
-import logoDark from "@assets/vst-logo-dark-horiz_1771445183074.png";
-
-import vst_logo_grey_horiz from "@assets/vst-logo-grey-horiz.png";
-
-import VST___HORIZONTAL_2x from "@assets/VST - HORIZONTAL@2x.png";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
