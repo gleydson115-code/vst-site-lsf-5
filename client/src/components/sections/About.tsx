@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-import aboutImage from "@assets/generated_images/construction_team_working_on_steel_frame.png";
+import aboutImage from "@assets/Design_Sem_Nome_-_1_-_Editado_1771443202140.png";
 
 export default function About() {
   return (
@@ -54,18 +54,18 @@ export default function About() {
 
           <div className="relative order-1 md:order-2 group">
             <div className="absolute inset-0 bg-primary/5 rounded-2xl transform rotate-3 scale-105 group-hover:rotate-2 transition-transform duration-500" />
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-[#1A1A2E] p-8">
               <img 
                 src={aboutImage} 
-                alt="Equipe Versato em obra" 
-                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                alt="Mapa de atuação Versato" 
+                className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-700"
               />
               
               {/* Floating Badge */}
               <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur shadow-lg p-4 rounded-lg max-w-[200px] border border-border/50">
-                <p className="text-primary font-bold text-3xl mb-1">100%</p>
-                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">
-                  Precisão Industrial em cada detalhe
+                <p className="text-primary font-bold text-xl mb-1">Atuação Regional</p>
+                <p className="text-[10px] text-muted-foreground font-medium uppercase tracking-wide">
+                  Pioneirismo e presença estratégica em todo o Piauí
                 </p>
               </div>
             </div>
