@@ -1,5 +1,7 @@
 import wallImage from "@assets/image_1767454442595.png";
 
+import vst_camadas_parede from "@assets/vst-camadas-parede.png";
+
 export default function WallComposition() {
   const layers = [
     "Elevação dos painéis de aço galvanizado",
@@ -28,7 +30,7 @@ export default function WallComposition() {
             <div className="flex flex-col gap-10">
               <div className="relative w-full max-w-4xl mx-auto">
                  <img 
-                  src={wallImage} 
+                  src={vst_camadas_parede} 
                   alt="Camadas Parede Steel Frame" 
                   className="w-full h-auto rounded-lg mix-blend-multiply"
                 />
