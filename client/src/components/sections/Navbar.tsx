@@ -4,8 +4,6 @@ import { Button } from "@/components/ui/button";
 import logoWhite from "@assets/vst-logo-2x-bco_1767448844183.png";
 import logoDark from "@assets/vst-logo-dark-horiz_1771445183074.png";
 
-import vst_logo_grey_horiz from "@assets/vst-logo-grey-horiz.png";
-
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,7 +25,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <a href="#" className="flex items-center">
           <img 
-            src={vst_logo_grey_horiz} 
+            src={isScrolled ? logoDark : logoWhite} 
             alt="Versato Steel Frame" 
             className="h-8 md:h-10 w-auto transition-all duration-300" 
           />
@@ -59,6 +57,7 @@ export default function Navbar() {
           {isMobileMenuOpen ? <X /> : <Menu />}
         </button>
       </div>
+
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-border p-4 flex flex-col space-y-4 shadow-lg animate-in slide-in-from-top-5">
