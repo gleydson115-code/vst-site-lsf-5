@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { X, ArrowRight, MapPin } from "lucide-react";
 import project1 from "@assets/generated_images/modern_luxury_house_project.png";
 import project2 from "@assets/generated_images/modern_daycare_building_project.png";
@@ -102,6 +102,8 @@ export default function Projects() {
                 </div>
               </DialogTrigger>
               <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background">
+                 <DialogTitle className="sr-only">{project.title}</DialogTitle>
+                 <DialogDescription className="sr-only">{project.description}</DialogDescription>
                  <div className="grid md:grid-cols-2">
                     <div className="h-64 md:h-auto">
                       <img 
