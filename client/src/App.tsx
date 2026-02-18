@@ -16,6 +16,7 @@ function Router() {
 }
 
 function App() {
+  console.log("Versato App Loaded Successfully");
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
