@@ -6,8 +6,16 @@ import { X, ArrowRight, MapPin, Clock, Ruler, ShieldCheck } from "lucide-react";
 const projects = [
   {
     id: 1,
-    image: "/projects/ibiapina/cover.jpg",
-    gallery: ["/projects/ibiapina/1.jpg", "/projects/ibiapina/2.jpg"],
+    image: "/projects/ibiapina/cover.png",
+    gallery: [
+      "/projects/ibiapina/img_1.png",
+      "/projects/ibiapina/img_2.png",
+      "/projects/ibiapina/img_3.png",
+      "/projects/ibiapina/img_4.jpg",
+      "/projects/ibiapina/img_5.png",
+      "/projects/ibiapina/img_6.png",
+      "/projects/ibiapina/img_7.png"
+    ],
     title: "Parede Corta-Fogo – Grupo Ibiapina",
     location: "Teresina, PI",
     category: "Comercial",
@@ -24,8 +32,14 @@ const projects = [
   },
   {
     id: 2,
-    image: "/projects/vilar/cover.jpg",
-    gallery: [],
+    image: "/projects/vilar/cover.png",
+    gallery: [
+      "/projects/vilar/img_1.png",
+      "/projects/vilar/img_2.png",
+      "/projects/vilar/img_3.png",
+      "/projects/vilar/img_4.png",
+      "/projects/vilar/img_5.png"
+    ],
     title: "Fachada Hospitalar – Vilar Hospital de Olhos",
     location: "Teresina, PI",
     category: "Institucional",
@@ -41,8 +55,17 @@ const projects = [
   },
   {
     id: 3,
-    image: "/projects/alphaville/cover.jpg",
-    gallery: [],
+    image: "/projects/alphaville/cover.png",
+    gallery: [
+      "/projects/alphaville/img_1.png",
+      "/projects/alphaville/img_2.png",
+      "/projects/alphaville/img_3.png",
+      "/projects/alphaville/img_4.png",
+      "/projects/alphaville/img_5.png",
+      "/projects/alphaville/img_6.png",
+      "/projects/alphaville/img_7.png",
+      "/projects/alphaville/img_8.png"
+    ],
     title: "Ampliação Residencial – Alphaville",
     location: "Teresina, PI",
     category: "Residencial",
@@ -59,7 +82,17 @@ const projects = [
   {
     id: 4,
     image: "/projects/casacor/cover.jpg",
-    gallery: [],
+    gallery: [
+      "/projects/casacor/img_1.png",
+      "/projects/casacor/img_2.png",
+      "/projects/casacor/img_3.png",
+      "/projects/casacor/img_4.png",
+      "/projects/casacor/img_5.png",
+      "/projects/casacor/img_6.png",
+      "/projects/casacor/img_7.png",
+      "/projects/casacor/img_8.png",
+      "/projects/casacor/img_9.jpg"
+    ],
     title: "Estande CASACOR|PI 2024",
     location: "Teresina, PI",
     category: "Comercial",
@@ -76,7 +109,10 @@ const projects = [
   {
     id: 5,
     image: "/projects/45burguer/cover.jpg",
-    gallery: [],
+    gallery: [
+      "/projects/45burguer/img_1.jpg",
+      "/projects/45burguer/img_2.jpg"
+    ],
     title: "Mezanino – 45 Burguer",
     location: "Teresina, PI",
     category: "Comercial",
@@ -93,7 +129,15 @@ const projects = [
   {
     id: 6,
     image: "/projects/aldebaran-garagem/cover.jpg",
-    gallery: [],
+    gallery: [
+      "/projects/aldebaran-garagem/img_1.jpg",
+      "/projects/aldebaran-garagem/img_2.jpg",
+      "/projects/aldebaran-garagem/img_3.jpg",
+      "/projects/aldebaran-garagem/img_4.jpg",
+      "/projects/aldebaran-garagem/img_5.jpg",
+      "/projects/aldebaran-garagem/img_6.jpg",
+      "/projects/aldebaran-garagem/img_7.jpg"
+    ],
     title: "Garagem Residencial – Aldebaran Leste",
     location: "Teresina, PI",
     category: "Residencial",
@@ -109,8 +153,10 @@ const projects = [
   },
   {
     id: 7,
-    image: "/projects/aldebaran-residencia/cover.jpg",
-    gallery: [],
+    image: "/projects/aldebaran-residencia/cover.png",
+    gallery: [
+      "/projects/aldebaran-residencia/img_1.png"
+    ],
     title: "Residência Alto Padrão – Aldebaran Ville",
     location: "Teresina, PI",
     category: "Residencial",
@@ -192,19 +238,19 @@ export default function Projects() {
                  <DialogTitle className="sr-only">{project.title}</DialogTitle>
                  <DialogDescription className="sr-only">{project.description}</DialogDescription>
                  <div className="grid md:grid-cols-2">
-                    <div className="h-72 md:h-auto bg-muted">
-                      <div className="grid grid-cols-2 gap-2 h-full p-2">
+                    <div className="h-[400px] md:h-auto bg-muted overflow-y-auto">
+                      <div className="flex flex-col gap-2 p-2">
                         <img 
                           src={project.image} 
                           alt={project.title} 
-                          className="w-full h-full object-cover rounded-lg col-span-2"
+                          className="w-full h-auto object-cover rounded-lg"
                         />
                         {project.gallery && project.gallery.length > 0 && project.gallery.map((img, idx) => (
                           <img 
                             key={idx}
                             src={img} 
                             alt={`${project.title} - ${idx + 2}`} 
-                            className="w-full h-40 object-cover rounded-lg"
+                            className="w-full h-auto object-cover rounded-lg"
                           />
                         ))}
                       </div>
