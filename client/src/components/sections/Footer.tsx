@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import logo from "@assets/vst-logo-2x-bco_1767448844183.png";
 
 export default function Footer() {
@@ -19,9 +19,6 @@ export default function Footer() {
               </a>
               <a href="https://www.facebook.com/profile.php?id=61588591881056" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors hover:bg-white/5 p-2 rounded-full">
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors hover:bg-white/5 p-2 rounded-full">
-                <Youtube className="w-5 h-5" />
               </a>
             </div>
           </div>
