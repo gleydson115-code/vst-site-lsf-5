@@ -4,7 +4,9 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } 
 import { X, ArrowRight, MapPin, Clock, Ruler, ShieldCheck } from "lucide-react";
 
 // Import project images from attached_assets
-import ibiapina1 from "@assets/image_1767451013444.png"; // Placeholder mapping based on visual similarity/order
+import ibiapina1 from "@assets/image_1767451013444.png";
+import ibiapina2 from "@assets/image_1767451374592.png";
+import ibiapina3 from "@assets/image_1767451673635.png";
 import vilar1 from "@assets/image_1767452155688.png";
 import alphaville1 from "@assets/image_1767451482073.png";
 import casacor1 from "@assets/image_1767453018909.png";
@@ -16,6 +18,7 @@ const projects = [
   {
     id: 1,
     image: ibiapina1,
+    gallery: [ibiapina2, ibiapina3],
     title: "Parede Corta-Fogo – Grupo Ibiapina",
     location: "Teresina, PI",
     category: "Comercial",
@@ -195,11 +198,21 @@ export default function Projects() {
                  <DialogDescription className="sr-only">{project.description}</DialogDescription>
                  <div className="grid md:grid-cols-2">
                     <div className="h-72 md:h-auto bg-muted">
-                      <img 
-                        src={project.image} 
-                        alt={project.title} 
-                        className="w-full h-full object-cover"
-                      />
+                      <div className="grid grid-cols-2 gap-2 h-full p-2">
+                        <img 
+                          src={project.image} 
+                          alt={project.title} 
+                          className="w-full h-full object-cover rounded-lg col-span-2"
+                        />
+                        {project.gallery && project.gallery.map((img, idx) => (
+                          <img 
+                            key={idx}
+                            src={img} 
+                            alt={`${project.title} - ${idx + 2}`} 
+                            className="w-full h-40 object-cover rounded-lg"
+                          />
+                        ))}
+                      </div>
                     </div>
                     <div className="p-8 space-y-6 max-h-[90vh] overflow-y-auto">
                       <div>
